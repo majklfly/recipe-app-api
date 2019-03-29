@@ -7,8 +7,8 @@ COPY ./requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
 
 RUN mkdir /app
-WORKID /app
-COPY ./app/app
+WORKDIR /app
+COPY ./app/ /app
 
 RUN adduser -D user
 USER user
