@@ -17,6 +17,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['192.168.99.100', 'localhost', '127.0.0.1']
 
+REST_FRAMEWORK = {
+   'DEFAULT_AUTHENTICATION_CLASSES': (
+       'rest_framework.authentication.TokenAuthentication',
+       'rest_framework.authentication.SessionAuthentication',
+   ),
+}
 
 # Application definition
 
